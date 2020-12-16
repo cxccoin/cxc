@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=KoiPay
+Comment=KoiPay P2P Cryptocurrency
+Comment[fr]=KoiPay, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=KoiPay, eşten eşe kriptografik sanal para birimi
+Exec=koipay-qt %u
+Terminal=false
+Type=Application
+Icon=koipay128
+MimeType=x-scheme-handler/koipay;
+Categories=Office;Finance;

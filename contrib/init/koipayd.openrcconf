@@ -1,0 +1,26 @@
+# /etc/conf.d/koipayd: config file for /etc/init.d/koipayd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/koipay/koipay.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/koipayd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/koipayd.pid"
+
+# Where to write koipayd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/koipayd"
+
+# User and group to own koipayd process
+#BITCOIND_USER="koipay"
+#BITCOIND_GROUP="koipay"
+
+# Path to koipayd executable
+#BITCOIND_BIN="/usr/bin/koipayd"
+
+# Nice value to run koipayd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

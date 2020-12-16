@@ -1,0 +1,26 @@
+[Unit]
+Description=KoiPay's distributed currency daemon
+After=network.target
+
+[Service]
+User=koipay
+Group=koipay
+
+Type=forking
+PIDFile=/var/lib/koipayd/koipayd.pid
+
+ExecStart=/usr/bin/koipayd -daemon -pid=/var/lib/koipayd/koipayd.pid \
+          -conf=/etc/koipay/koipay.conf -datadir=/var/lib/koipayd
+
+ExecStop=-/usr/bin/koipay-cli -conf=/etc/koipay/koipay.conf \
+         -datadir=/var/lib/koipayd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
